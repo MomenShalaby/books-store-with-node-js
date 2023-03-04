@@ -1,13 +1,13 @@
 var express = require('express')
 const router =express.Router()
-const noteCtrl =require('../controller/noteController')
+const booksController =require('../controller/booksController')
 
-router.get("/notes/getallnotes", noteCtrl.getAllNotes)
+router.get("/books/getallbooks", booksController.getAllBooks)
 
-router.post("/notes/save",noteCtrl.saveNote)
+router.post("/books/save",booksController.saveBook)
 
-router.put("/notes/update",noteCtrl.updateNote)
+router.put("/books/update",booksController.updateBook)
 
-router.delete("/notes/delete",noteCtrl.deleteNote)
+router.delete("/books/delete",booksController.deleteBook)
 
 module.exports = router
