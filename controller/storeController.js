@@ -1,13 +1,13 @@
-var generator = require("../Util/generator")
-var memStorage = require("../Util/memoryStorage")
 var model =require("../model/storeModel")
+var queries = require("../db/queries")
+exports.getStoresList = (req,res)=>{
 
-exports.getAllStore = (req,res)=>{
+    getStoresListQuery =queries.quriesList.GET_STORE_LIST_QUERY
 
     return res.status(200).send("JSON.stringify(values)")
 }
 
-exports.saveStore = (req,res)=>{
+exports.createStore = (req,res)=>{
 
 }
 
