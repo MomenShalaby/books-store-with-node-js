@@ -1,8 +1,12 @@
 const { Pool } = require('pg')
-const dotenv = require('dotenv')
-dotenv.config()
+// const dotenv = require('dotenv')
+
+require('dotenv').config()
 
 const db_config={
+
+  password:'postgres',
+
   connectionTimeoutMillis: 300,
  
   idleTimeoutMillis: 200,
@@ -10,9 +14,10 @@ const db_config={
   max: 10,
  
   connectionString:process.env.DATABASE_URL
+    
 }
 
-const pool = new Pool({db_config})
+const pool = new Pool(db_config)
 
 
 pool.on('connect', (client) => {

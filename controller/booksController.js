@@ -4,7 +4,8 @@ var model =require("../model/booksModel")
 
 exports.getAllBooks= (req,res)=>{
 
-    return res.status(200).send("JSON.stringify(values)")
+    
+    return res.status(200).send("works")
 }
 
 exports.saveBook = (req,res)=>{
