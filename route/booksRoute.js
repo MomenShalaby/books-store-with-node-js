@@ -4,7 +4,9 @@ const booksController =require('../controller/booksController')
 
 router.get("/books/getallbooks", booksController.getAllBooks)
 
-router.post("/books/save",booksController.saveBook)
+router.get("/books/getbookdetails/:bookID",booksController.getBooksDetails)
+
+router.post("/books/create",booksController.createBook)
 
 router.put("/books/update",booksController.updateBook)
 
