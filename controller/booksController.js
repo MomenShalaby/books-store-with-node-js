@@ -17,13 +17,22 @@ try{
 
 exports.getBooksDetails= async(req,res)=>{
     try{
-        bookID=req.params.bookID
-        if(!bookID){
+        book_id=req.params.book_id
+        if(!book_id){
             return res.status(500).send({ error: 'Book ID is empty' })
 
         }
+
+        var id_query= queries.quriesList.GET_BOOK_ID_QUERY
+        var id= await dbConnection.dbQuery(id_query,[book_id])
+
+
+        if(id.rows[0].count=="0"){
+            return res.status(500).send({ error: 'Book id not found' })
+
+        }
         var GET_BOOKS_DETAILS= queries.quriesList.GET_BOOKS_DETAILS_QUERY
-        var result =await dbConnection.dbQuery(GET_BOOKS_DETAILS,[bookID])
+        var result =await dbConnection.dbQuery(GET_BOOKS_DETAILS,[book_id])
         return res.status(200).send(result.rows)
     
     } catch (error) {

@@ -4,7 +4,7 @@ const booksController =require('../controller/booksController')
 
 router.get("/books/getallbooks", booksController.getAllBooks)
 
-router.get("/books/getbookdetails/:bookID",booksController.getBooksDetails)
+router.get("/books/getbookdetails/:book_id",booksController.getBooksDetails)
 
 router.post("/books/create",booksController.createBook)
 
