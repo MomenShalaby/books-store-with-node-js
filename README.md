@@ -1,6 +1,6 @@
 # books-store-with-node-js
 Books Store with Node JS
-This is a simple books store built with NodeJS, ExpressJS, and MongoDB. The application allows users to view books, add books to cart, and view their order history.
+This is a simple books store built with NodeJS, ExpressJS, and PostgreSQL. The application allows users to view books, add books to cart, and view their order history.
 
 # Installation
 ## Clone the repository
